@@ -5,7 +5,7 @@ Thinkify is a full-stack social networking and productivity platform where users
 # Preview
 
 <img src="/preview.png">
-<a href="https://thinkify.vercel.app" target="_blank">Live Preview</a> | <a href="https://thinkify-server.vercel.app" target="_blank">Live API</a> | <a href="https://documenter.getpostman.com/view/27027258/2sA3dxEXJh" target="_blank">Postman</a>
+<a href="https://thinkify-kt1e4kyf5-sparky-lol-007.vercel.app" target="_blank">Live Preview</a> | <a href="https://thinkify-backend-bnh6.onrender.com" target="_blank">Live API</a> 
 
 # Requirements
 
