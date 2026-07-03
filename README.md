@@ -1,136 +1,58 @@
-# Thinkify
+# Thinkify 🚀
 
-Thinkify is a vibrant space where people from diverse backgrounds and interests come together to engage in meaningful conversations, fostering an environment rich in idea exchange, knowledge sharing, and diverse experiences.
+[![Vercel Deployment](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel)](https://thinkify.vercel.app)
+[![Render Backend](https://img.shields.io/badge/Backend-Render-darkblue?style=flat-square&logo=render)](https://thinkify-backend-bnh6.onrender.com)
+[![Postman API Docs](https://img.shields.io/badge/API_Docs-Postman-orange?style=flat-square&logo=postman)](https://documenter.getpostman.com/view/27027258/2sA3dxEXJh)
 
-# Preview
+Thinkify is a robust, full-stack web hub engineered to foster vibrant, cross-disciplinary collaboration, idea validation, and structured productivity. Architected as a decoupled multi-directory monorepo, the platform uses fine-grained role permissions, backend data aggregation pipelines, and secure token isolation to deliver a modern community experience.
 
-<img src="/preview.png">
-<a href="https://thinkify.vercel.app" target="_blank">Live Preview</a> | <a href="https://thinkify-server.vercel.app" target="_blank">Live API</a> | <a href="https://documenter.getpostman.com/view/27027258/2sA3dxEXJh" target="_blank">Postman</a>
+---
 
-# Requirements
+## 🔗 Live Links & Preview
 
-[Install Node On Your Device](https://nodejs.org/)
+* **Live Frontend Web Client:** [https://thinkify.vercel.app](https://thinkify.vercel.app)
+* **Production API Target Service:** [https://thinkify-backend-bnh6.onrender.com/api](https://thinkify-backend-bnh6.onrender.com/api)
+* **Interactive API Playground:** [Postman Workspace View](https://documenter.getpostman.com/view/27027258/2sA3dxEXJh)
 
-# How to Run
+---
 
-```
-git clone https://github.com/masum184e/thinkify.git
+## 🛠️ Architectural Breakdown & Stack
 
-# BACKEND
-cd server
-npm install
-npx nodemon index.js
+The system decouples the layout layer from the data management container. Client components communicate via an asynchronous API bridge utilizing structured cross-origin configurations.
 
-# FRONTEND
-cd ../client
-npm install
-npm run dev
-```
+| Layer Domain | Component Responsibility | Technical Implementation Stack |
+| :--- | :--- | :--- |
+| **Frontend UI** | Static Client Interface | React.js (Vite Bundle Compiler), Axios Client, Tailwind CSS |
+| **Backend API** | REST API Business Logic | Node.js, Express.js Web Framework, Cookie-Parser Middleware |
+| **Database** | Managed Persistence | MongoDB Cloud Atlas (Mongoose ODM Framework) |
+| **Deployment** | Production Infrastructure | Vercel (Edge Client Engine), Render (Dynamic Cloud Instances) |
 
-# Environment Variables
+---
 
-## Frontend
+## 💡 System Design & Core Engineering
 
-```
-VITE_SERVER_ENDPOINT = https://thinkify-server.vercel.app:3000/api
-VITE_TOKEN_KEY = thinkify
-VITE_USER_ROLE = role
-VITE_COOKIE_EXPIRES = 1
-```
+### 🔐 Token-Isolated Session Security
+* **Cryptographic Salting:** Credentials undergo one-way transformation using **Bcrypt multi-round salt generation algorithms** prior to database persistence.
+* **XSS Defended Tracking:** Upon verification, credentials generate signed **JSON Web Tokens (JWT)** issued straight into the client environment via **HttpOnly cookies**, creating a barrier against cross-site scripting script injection vulnerabilities.
 
-## Backend
+### 🛡️ Admin Dashboard & Telemetry Aggregations
+* **System Control Center:** Administrative portals access dynamic user privilege tables for community platform regulation.
+* **Database Telemetry Pipelines:** Utilizes native MongoDB computational aggregation matrices to parse registration numbers over the last 30 days alongside user role tier weights.
 
-```
-PORT = 3000
-DATABASE_URL = mongodb://localhost:27017/
-DATABASE_NAME = thinkify
-BCRYPT_GEN_SALT_NUMBER = 10
-JWT_SECRET_KEY = abcdefghijklmnopqrstuvwxyz
-COOKIE_EXPIRES = 5d
-COOKIE_KEY = thinkify
-UPLOAD_DIRECTORY = uploads
-```
+### 🎓 Dynamic Member Profiles & Utilities
+* **Content Inventory Operations:** Full CRUD integration allows members to submit rich-text posts, curate custom products, or purge old records instantly.
+* **Task Matrix Workspace:** Native client-side schedule tracker configured directly within profile layers to maintain personal operational deadlines.
+* **Security Control Systems:** Profile-level sub-routing modules empowering users to manage self-serve rotation of account passwords.
 
-# Features
+---
 
-## Admin
+## ⚙️ Project Environment Matrix
 
-- Profile
-  - Last Month User Activity
-  - Role Based User Distribution
-- Users Management
-- Sign Out
+To launch this system locally or configure hosting environment dashboards, establish individual target variables using the parameters below:
 
-## Student
-
-- Profile
-- Add Post
-- My Posts
-- Add Product
-- My Products
-- Task Manager
-- Setting
-  - Change Password
-- Sign Out
-
-# Contribution Ideas
-
-- Continue with Google signup/signin
-- Single Product Sell Page
-- View Task Details
-- View User Details(public)
-- Edit user, post, product
-- Loading View
-
-## Institution/Teacher
-
-- post(text, image)
-  - by admin/institution
-  - by teacher
-- assignments
-- poll
-- resource sharing
-- test
-
-### Design Idea
-
-```
-|----------------------------------------------------------------
-|                 |                                |  Analytics |
-|-----------------|                                |------------|
-|                 |          ----------            |  Teachers  |
-|-----------------|          | Create |            |  Students  |
-|   Institution   |          ----------            |  Courses   |
-|-----------------|                                |    Posts   |
-|                 |                                |    ....    |
-|-----------------|--------------------------------|------------|
-```
-
-### Assignments
-
-- title
-- description
-- subject
-- deadline
-- total marks
-- status
-- audience
-
-### Polls
-
-- title
-- description
-- type(singl, multiple)
-- options
-- deadline
-- status
-- anonymous member
-- audience
-
-### Resource
-
-- title
-- description
-- visibility
-- url
-- audience
+### 📱 Frontend Config Container (`/client/.env`)
+```env
+VITE_SERVER_ENDPOINT=[https://thinkify-backend-bnh6.onrender.com/api](https://thinkify-backend-bnh6.onrender.com/api)
+VITE_TOKEN_KEY=thinkify
+VITE_USER_ROLE=role
+VITE_COOKIE_EXPIRES=1
