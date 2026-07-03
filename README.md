@@ -120,7 +120,7 @@ UPLOAD_DIRECTORY = uploads
 
 - title
 - description
-- type(singl, multiple)
+- type(single, multiple)
 - options
 - deadline
 - status
