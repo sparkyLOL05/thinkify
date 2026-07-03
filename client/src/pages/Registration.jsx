@@ -42,11 +42,13 @@ const Registration = () => {
     resolver: yupResolver(schema),
   });
   // form submit
-  const onSubmit = async (data) => {
+  
+    const onSubmit = async (data) => {
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_SERVER_ENDPOINT}/users/registration`,
-        data
+        data,
+        { withCredentials: true } // 👈 CRITICAL: This allows cookies to pass between Vercel and Render!
       );
       if (response.data.status) {
         Cookies.set(import.meta.env.VITE_TOKEN_KEY, response.data.token, {
