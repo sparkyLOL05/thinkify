@@ -46,9 +46,9 @@ const Registration = () => {
     const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        `https://thinkify-backend-bnh6.onrender.com/api/users/registration`,
+        "https://thinkify-backend-bnh6.onrender.com/api/users/registration", 
         data,
-        { withCredentials: true }
+        { withCredentials: true } 
       );
       if (response.data.status) {
         Cookies.set(import.meta.env.VITE_TOKEN_KEY, response.data.token, {
