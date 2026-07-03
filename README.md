@@ -1,6 +1,6 @@
 # Thinkify 🚀
 
-[![Vercel Deployment](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel)](https://thinkify.vercel.app)
+[![Vercel Deployment](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel)](https://thinkify-kt1e4kyf5-sparky-lol-007.vercel.app)
 [![Render Backend](https://img.shields.io/badge/Backend-Render-darkblue?style=flat-square&logo=render)](https://thinkify-backend-bnh6.onrender.com)
 [![Postman API Docs](https://img.shields.io/badge/API_Docs-Postman-orange?style=flat-square&logo=postman)](https://documenter.getpostman.com/view/27027258/2sA3dxEXJh)
 
@@ -10,7 +10,7 @@ Thinkify is a robust, full-stack web hub engineered to foster vibrant, cross-dis
 
 ## 🔗 Live Links & Preview
 
-* **Live Frontend Web Client:** [https://thinkify.vercel.app](https://thinkify.vercel.app)
+* **Live Frontend Web Client:** [https://thinkify-kt1e4kyf5-sparky-lol-007.vercel.app](https://thinkify-kt1e4kyf5-sparky-lol-007.vercel.app)
 * **Production API Target Service:** [https://thinkify-backend-bnh6.onrender.com/api](https://thinkify-backend-bnh6.onrender.com/api)
 * **Interactive API Playground:** [Postman Workspace View](https://documenter.getpostman.com/view/27027258/2sA3dxEXJh)
 
