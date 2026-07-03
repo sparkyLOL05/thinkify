@@ -28,15 +28,14 @@ const MyProduct = () => {
       setLoadingStatus(true);
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_SERVER_ENDPOINT}/products`,
-          {
-            headers: {
-              Authorization: `Bearer ${Cookies.get(
-                import.meta.env.VITE_TOKEN_KEY
-              )}`,
-            },
-          }
-        );
+        `${import.meta.env.VITE_SERVER_ENDPOINT}/products`,
+        {
+          headers: {
+            // Clean up the template evaluation lines here:
+            Authorization: `Bearer ${Cookies.get(import.meta.env.VITE_TOKEN_KEY)}`,
+          },
+        }
+      );
         if (response.data.status) {
           setData(response.data.products);
         } else {
